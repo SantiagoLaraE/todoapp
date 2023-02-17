@@ -1,0 +1,42 @@
+.TodoCounter {
+  text-align: center;
+  border-radius: 1.6rem;
+  background-color: var(--glass-background);
+  border: var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  margin: 6rem 0 3.2rem;
+  padding: 1.6rem;
+}
+.TodoCounter_span {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.TodoCounter_title {
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--glass-background);
+  -webkit-text-stroke: 0.1rem rgba(255, 255, 255, 0.75);
+}
+.TodoCounter_taskCounter {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+.TodoCounter_taskCounter span {
+  display: inline-block;
+  height: 0.1rem;
+  width: 3.2rem;
+  background-color: var(--text-color);
+}

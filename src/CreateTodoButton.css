@@ -1,0 +1,31 @@
+.CreateTodoButton {
+  position: sticky;
+  bottom: 3.2rem;
+  width: 6.4rem;
+  height: 6.4rem;
+  display: block;
+  padding: 1.6rem;
+  margin-left: auto;
+  box-shadow: 0 0 6.4rem rgba(0,0,0,1);
+  display: grid;
+  place-items: center;
+  border-radius: 1.6rem;
+  background-color: var(--glass-background);
+  border: var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  cursor: pointer;
+}
+.CreateTodoButton::before {
+  content: "";
+  display: block;
+  width: 6.4rem;
+  height: 6.4rem;
+  position: absolute;
+  border-radius: 100%;
+  z-index: -1;
+  filter: blur(1rem);
+  background: var(--green-gradient);
+  transform: scale(0.8) rotate(45deg);
+  transform-origin: center;
+  transition: transform .2s ease-in-out;
+}

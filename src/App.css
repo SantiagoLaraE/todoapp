@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+:root {
+  --glass-blur: blur(10px);
+  --glass-background: rgba(255, 255, 255, 0.15);
+  --glass-border: 1px solid var(--glass-background);
+  --text-color: #ffffff;
+  --bg-color: #0e100f;
+  --green-gradient: radial-gradient(
+    100% 100% at 50% 0%,
+    #20e800 0%,
+    rgba(0, 232, 232, 0.25) 100%
+  );
+  --red-gradient: radial-gradient(
+    100% 100% at 50% 0%,
+    #e80000 0%,
+    rgba(232, 0, 97, 0.25) 100%
+  );
+  --yellow-gradient: radial-gradient(
+    100% 100% at 50.62% 0%,
+    #ebff00 0%,
+    rgba(255, 92, 0, 0.4) 100%
+  );
+  --pink-gradient: radial-gradient(
+    100% 100% at 49.38% 0%,
+    #fa00ff 0%,
+    rgba(207, 0, 0, 0.25) 100%
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: "Prompt", sans-serif;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  background-color: var(--bg-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: 1;
+}
+.container {
+  margin: 1.6rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 76.8rem;
+    margin: 1.6rem auto;
+    padding: 0 1.6rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.circle {
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.circle.green {
+  background: var(--green-gradient);
+}
+.circle.yellow {
+  background: var(--yellow-gradient);
+}
+.circle.pink {
+  background: var(--pink-gradient);
 }
 
-.App-link {
-  color: #61dafb;
+.circle-01 {
+  width: 12.5rem;
+  height: 12.5rem;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circle-02 {
+  width: 8rem;
+  height: 8rem;
+ left: 5%;
+  transform: translateY(-50%);
+}
+.circle-03 {
+  width: 8rem;
+  height: 8rem;
+ right: -1%;
+  transform: translateY(-40%);
 }
