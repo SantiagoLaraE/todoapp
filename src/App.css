@@ -31,6 +31,10 @@
   box-sizing: border-box;
   font-weight: 400;
 }
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 html,
 body {
   margin: 0;
@@ -53,13 +57,7 @@ p {
   margin: 1.6rem;
   position: relative;
 }
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 76.8rem;
-    margin: 1.6rem auto;
-    padding: 0 1.6rem;
-  }
-}
+
 .circle {
   display: block;
   border-radius: 50%;
@@ -76,14 +74,14 @@ p {
   background: var(--pink-gradient);
 }
 
-.circle-01 {
+.circle-02 {
   width: 12.5rem;
   height: 12.5rem;
   top: 8%;
   left: 50%;
   transform: translateX(-50%);
 }
-.circle-02 {
+.circle-01 {
   width: 8rem;
   height: 8rem;
  left: 5%;
@@ -94,4 +92,28 @@ p {
   height: 8rem;
  right: -1%;
   transform: translateY(-40%);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 76.8rem;
+    margin: 1.6rem auto;
+    padding: 0 1.6rem;
+  }
+  .circle-01 {
+    width: 10rem;
+    height: 10rem;
+   left: 20%;
+    transform: translateY(-65%);
+  }
+  .circle-02 {
+    width: 16.5rem;
+    height: 16.5rem;
+    top: 30%;
+  }
+  .circle-03 {
+    width: 13rem;
+    height: 13rem;
+  }
+
 }

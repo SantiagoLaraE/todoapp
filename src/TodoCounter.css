@@ -40,3 +40,15 @@
   width: 3.2rem;
   background-color: var(--text-color);
 }
+
+@media screen and (min-width: 768px) {
+  .TodoCounter {
+    margin: 10rem 0 6.4rem;
+  }
+  .TodoCounter_title {
+    font-size: 9.6rem;
+  }
+  .TodoCounter_taskCounter {
+    font-size: 2.4rem;
+  }
+}
