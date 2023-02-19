@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 import "./TodoItem.css";
 
-function TodoItem({ text }) {
+function TodoItem({ todo }) {
+  const { onCompleteTodo, onDeleteTodo } = useContext(AppContext);
   return (
-    <li className="TodoItem">
-      <button className="TodoItem_btn TodoItem_btn-check">
+    <li className={`TodoItem ${todo.completed ? "completed" : ""}`}>
+      <button
+        aria-label="Complete item"
+        className="TodoItem_btn TodoItem_btn-check"
+        onClick={() => onCompleteTodo(todo)}
+      >
         <svg
           width="12"
           height="9"
@@ -20,8 +26,12 @@ function TodoItem({ text }) {
           />
         </svg>
       </button>
-      <p>{text}</p>
-      <button className="TodoItem_btn TodoItem_btn-delete">
+      <p>{todo.text}</p>
+      <button
+        aria-label="Delete Item"
+        className="TodoItem_btn TodoItem_btn-delete"
+        onClick={() => onDeleteTodo(todo)}
+      >
         <svg
           width="12"
           height="12"

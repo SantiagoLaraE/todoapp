@@ -5,24 +5,24 @@
   --text-color: #ffffff;
   --bg-color: #0e100f;
   --green-gradient: radial-gradient(
-    100% 100% at 50% 0%,
+    ellipse  at 100% 0%,
     #20e800 0%,
-    rgba(0, 232, 232, 0.25) 100%
+    rgba(0, 232, 232, 0.25) 80%
   );
   --red-gradient: radial-gradient(
-    100% 100% at 50% 0%,
+    ellipse  at 100% 0%,
     #e80000 0%,
-    rgba(232, 0, 97, 0.25) 100%
+    rgba(232, 0, 97, 0.25) 80%
   );
   --yellow-gradient: radial-gradient(
-    100% 100% at 50.62% 0%,
+    ellipse  at 100% 0%,
     #ebff00 0%,
-    rgba(255, 92, 0, 0.4) 100%
+    rgba(255, 92, 0, 0.4) 80%
   );
   --pink-gradient: radial-gradient(
-    100% 100% at 49.38% 0%,
+    ellipse  at 100% 0%,
     #fa00ff 0%,
-    rgba(207, 0, 0, 0.25) 100%
+    rgba(207, 0, 0, 0.25) 80%
   );
 }
 
@@ -34,13 +34,13 @@
 html{
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
-html,
 body {
   margin: 0;
   padding: 0;
-  font-size: 62.5%;
   background-color: var(--bg-color);
+  color:var(--text-color);
 }
 
 h1,
@@ -53,16 +53,17 @@ p {
   margin: 0;
   line-height: 1;
 }
+p{
+  font-size: 1.6rem;
+}
 .container {
   margin: 1.6rem;
   position: relative;
 }
-
 .circle {
   display: block;
   border-radius: 50%;
   position: absolute;
-  transform: rotate(45deg);
 }
 .circle.green {
   background: var(--green-gradient);

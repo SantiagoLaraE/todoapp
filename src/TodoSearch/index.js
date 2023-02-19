@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 import "./TodoSearch.css";
 
 function TodoSearch() {
+  const { searchValue, setSearchValue } = useContext(AppContext);
+  const onSearch = (e) => {
+    e.preventDefault();
+    setSearchValue(e.target.value);
+  };
+
   return (
-    <form className="TodoSearch_container" action="">
-      <input className="TodoSearch" type="text" placeholder="Search tasks" />
-      <button type="submit" className="TodoSearch_btn">
+    <form className="TodoSearch_container" onSubmit={(e) => e.preventDefault()}>
+      <input
+        className="TodoSearch"
+        type="text"
+        placeholder="Search tasks"
+        onInput={onSearch}
+        value={searchValue}
+      />
+      <button
+        type="button"
+        className="TodoSearch_btn"
+        aria-label="Search tasks"
+      >
         <svg
           width="12"
           height="12"
