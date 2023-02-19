@@ -22,8 +22,6 @@ const AppProvider = (props) => {
         )
       : todos;
 
-  searchedTodos.reverse();
-
   const completedTodos = todos.filter((todo) => todo.completed).length;
   const totalTodos = todos.length;
 
